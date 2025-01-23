@@ -1,26 +1,64 @@
 <template>
-  <section class="hero flex flex-column align-items-center text-center py-8">
-    <h1 class="text-5xl font-bold mb-4">
-      Inspired <span class="highlight">Notion Insights</span> in your inbox.
-    </h1>
-    <p class="text-lg">
-      Join <strong>120,000+ subscribers</strong> empowered by tips, tutorials,
-      templates, and updates from the top Notion expert.
-    </p>
+  <section class="my-8">
+    <div class="container">
+      <div class="grid">
+        <div
+          class="col-12 lg:col-6 flex flex-column align-items-center lg:align-items-start"
+        >
+          <h1 class="text-center text-6xl lg:text-left lg:text-8xl">
+            Be part of the
+            <span class="gradient-text">first 10 posts</span>
+            delving into the world of adult industry.
+          </h1>
+
+          <Button
+            label="Participate"
+            class="p-button-lg"
+            @click="$router.push('/send')"
+          />
+        </div>
+
+        <div class="col-12 lg:col-6 hidden lg:block">
+          <img
+            :src="logo"
+            alt=""
+            class="w-full object-cover"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
-export default {};
+import logo from "@/assets/img/AW.jpg";
+
+export default {
+  name: "Hero",
+  data() {
+    return {
+      logo,
+    };
+  },
+};
 </script>
 
 <style>
-.hero {
-  background-color: #f9f9f9;
-}
-.highlight {
-  background: linear-gradient(90deg, #82c7f7, #ff9494);
+.gradient-text {
+  background: linear-gradient(
+    315deg,
+    var(--primary-200) 25%,
+    var(--secondary-500)
+  );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-8xl {
+    font-size: 6rem;
+  }
 }
 </style>

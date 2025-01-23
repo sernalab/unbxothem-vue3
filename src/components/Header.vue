@@ -1,36 +1,21 @@
 <template>
-  <header>
-    <p-menubar :model="items">
-      <template #start>
-        <img src="/logo.png" alt="Logo" height="40" />
-      </template>
-      <template #end>
-        <button class="p-button p-button-outlined p-button-rounded">
-          Subscribe
-        </button>
-      </template>
-    </p-menubar>
+  <header class="bg-blue-400 border-bottom-1 surface-border">
+    <div class="flex align-items-center">
+      <a href="/" class="no-underline">
+        <img src="@/assets/img/logo-ut.svg" alt="Logo" height="40" />
+      </a>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      items: [
-        { label: "Bulletproof", command: () => {} },
-        { label: "A-to-Z", command: () => {} },
-        { label: "Consulting", command: () => {} },
-        { label: "Productivity Nexus", command: () => {} },
-        { label: "Insights", command: () => {} },
-      ],
-    };
-  },
+  name: "Header",
 };
 </script>
 
-<style>
-header {
-  margin-bottom: 20px;
+<style scoped>
+.hover\:text-primary:hover {
+  color: var(--primary-color);
 }
 </style>

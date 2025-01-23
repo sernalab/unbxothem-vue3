@@ -1,10 +1,8 @@
 <template>
-  <div id="app">
-    <Header />
-    <Hero />
-    <SubscriptionForm />
-    <Footer />
-  </div>
+  <Header />
+  <Hero />
+  <SubscriptionForm />
+  <Footer />
 </template>
 
 <script>

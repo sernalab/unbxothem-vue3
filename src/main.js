@@ -1,6 +1,10 @@
+import "./assets/main.css";
+
 import { createApp } from "vue";
 import App from "./App.vue";
 import PrimeVue from "primevue/config";
+import "primeicons/primeicons.css";
+import "primeflex/primeflex.css";
 import Aura from "@primevue/themes/aura";
 
 import registerPrimeVueComponents from "./primevue-components";
@@ -11,11 +15,6 @@ app.use(PrimeVue, {
   ripple: true,
   theme: {
     preset: Aura,
-    options: {
-      prefix: "p",
-      darkModeSelector: "p-light",
-      cssLayer: false,
-    },
   },
 });
 
